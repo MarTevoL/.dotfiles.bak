@@ -14,5 +14,7 @@ return {
     leap.add_default_mappings(true)
     vim.keymap.del({ "x", "o" }, "x")
     vim.keymap.del({ "x", "o" }, "X")
+    -- set backdrop color to grey when search with s key
+    vim.api.nvim_set_hl(0, "LeapBackdrop", { link = "Comment" })
   end,
 }
