@@ -6,6 +6,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+alias reload-zsh="source ~/.zshrc"
+alias edit-zsh="nvim ~/.zshrc"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -28,4 +31,7 @@ export PATH=$HOME/development/tools/flutter/bin/cache/dart-sdk/bin:$PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH="/usr/local/share/dotnet/dotnet:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"⁨
+
 eval "$(zoxide init --cmd cd zsh)"
+
+alias ls="eza --icons=always"
